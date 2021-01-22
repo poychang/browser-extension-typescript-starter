@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Getting Started Extension's Popup</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+      font-size: 100%;
+    }
+  </style>
+  <script src="vendor.js"></script>
+</head>
+
+<body ng-app="app">
+  <div ng-controller="popupController as ctrl">
+    <ul style="min-width: 500px;">
+      <li>Current URL: {{ ctrl.url }}</li>
+      <li>Current Time: {{ ctrl.time }}</li>
+    </ul>
+
+    <button ng-click="ctrl.countUp()">Count up</button>
+    <button ng-click="ctrl.changeBackground()">Change background</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Browser Extension Options</title>
+  <script src="vendor.js"></script>
+</head>
+
+<body ng-app="app">
+  <div ng-controller="popupController as ctrl">
+    Favorite color:
+    <select ng-model="ctrl.selectedColor" ng-model="ctrl.selectedColor">
+      <option ng-repeat="color in ctrl.colorList" value="{{color}}">{{color}}</option>
+    </select>
+    <label>
+      <input type="checkbox" ng-model="ctrl.isLike" />
+      I like colors.
+    </label>
+    <div>{{ctrl.status}}</div>
+    <button ng-click="ctrl.save()">Save</button>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+
+</html>
